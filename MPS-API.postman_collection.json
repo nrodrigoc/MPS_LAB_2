@@ -1,0 +1,75 @@
+{
+	"variables": [],
+	"info": {
+		"name": "MPS-API",
+		"_postman_id": "f618b1e0-d807-83b4-612a-c82d9c944455",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Usuario",
+			"request": {
+				"url": "http://localhost:8080/api/credenciais",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BEARER eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWxpZGFkb3IiLCJuYmYiOjE2Mjk0ODU2MDcsInJvbGVzIjpbIlJPTEVfQ09ORklHX0ZFUlJBTUVOVEFTIiwiUk9MRV9DUkVBVEVfU0ZUUCIsIlJPTEVfRURJVF9TRlRQIiwiUk9MRV9VUExPQURfRklMRSIsIlJPTEVfVkFMSURBVEVfRklMRSIsIlJPTEVfVklFV19EQVNIQk9BUkQiLCJST0xFX1ZJRVdfRVJST1IiLCJST0xFX1ZJRVdfRklMRSIsIlJPTEVfVklFV19TRlRQIiwiUk9MRV9WSUVXX1ZBTElEQVRPUiJdLCJpc3MiOiJteWFwaS5jb20iLCJleHAiOjE2Mjk1OTM2MDcsImlhdCI6MTYyOTQ4NTYwNywianRpIjoiMzllZTBmYmZiOWNiNDA2Yjk3MWI3MTU2MDc0Mjc1MjUifQ.ETfYOUIWOSblHJzcwzb8SHxwLEr3cyr7nNwLXaj5xLkdWrEyBCiptBN-eiHAiq0in8uQK76osEModnrSA9WASA",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"rafael\",\n\t\"password\": \"Senh@123!\",\n\t\"data_nascimento\": \"15/04/2000\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Não Ordenada",
+			"request": {
+				"url": "http://localhost:8080/api/credenciais",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Ordenada Login",
+			"request": {
+				"url": "http://localhost:8080/api/credenciais/ordenadas-por-username",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Ordenada Data Nascimento",
+			"request": {
+				"url": "http://localhost:8080/api/credenciais/ordenadas-por-nascimento",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
