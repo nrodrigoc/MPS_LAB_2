@@ -32,11 +32,12 @@ public class UsuarioControlImpl implements UsuarioControl {
         String password = usuarioDTO.getPassword();
         Validacao.validar(username, new ValidacaoUsername());
         Validacao.validar(password, new ValidacaoPassword());
-
-        Usuario usuario = new Usuario(username, password, usuarioDTO.getData_nascimento());
         if (usuarioDTO.getData_nascimento() == null) {
             throw new ValidacaoException("Data de nascimento nula");
         }
+
+        UsuarioAdapterImpl usuarioAdapter = new UsuarioAdapterImpl(usuarioDTO);
+        Usuario usuario = usuarioAdapter.getUsuario();
         return UsuarioDataNascimentoDTO.fromUsuario(usuarioRepository.save(usuario));
     }
 
